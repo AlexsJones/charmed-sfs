@@ -1,0 +1,23 @@
+# Copyright 2022 jonesax
+# See LICENSE file for licensing details.
+
+# For a complete list of supported options, see:
+# https://juju.is/docs/sdk/metadata-reference
+name: sfs
+display-name: |
+  Stupid File Server
+description: |
+  SFS allows you to create a file server that can be used to share files within a Kubernetes cluster.
+  This is useful for serving binaries, images and other resources from a cold cache.
+summary: |
+  SFS allows you to create a file server that can be used to share files within a Kubernetes cluster.
+  This is useful for serving binaries, images and other resources from a cold cache.
+
+containers:
+  sfs:
+    resource: sfs-image
+
+resources:
+  sfs-image:
+    type: oci-image
+    description: OCI image for sfs
